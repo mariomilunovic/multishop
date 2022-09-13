@@ -10,7 +10,10 @@
     <title>Document</title>
 </head>
 <body>
+    
     <div class="bg-blue-700 text-white"> Tailwind test OK</div>
+
+    <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
 
 </body>
 </html>

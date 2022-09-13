@@ -4,6 +4,33 @@ composer create-project laravel/laravel multi-shop
 #2
 git init
 
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mariomilunovic/multishop.git
+git push -u origin main
+
 #3
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
+
+tailwind.config.js:
+ content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+  ],
+
+
+#9
+npm install alpinejs
+npm install @alpinejs/persist
+npm install @alpinejs/collapse
+
+app.js:
+import Alpine from 'alpinejs'
+import persist from '@alpinejs/persist'
+Alpine.plugin(persist)
+import collapse from '@alpinejs/collapse'
+Alpine.plugin(collapse)
+window.Alpine = Alpine
+Alpine.start()
