@@ -8,12 +8,15 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <title>Document</title>
+    @livewireStyles
 </head>
 <body>
-    
+
     <div class="bg-blue-700 text-white"> Tailwind test OK</div>
 
-    <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+    <h1 x-data="{ message: 'Alpine test OK' }" x-text="message"></h1>
 
+    <livewire:livewire-test />
+    @livewireScripts
 </body>
 </html>
