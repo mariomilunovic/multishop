@@ -3,3 +3,7 @@ composer create-project laravel/laravel multi-shop
 
 #2
 git init
+
+#3
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
