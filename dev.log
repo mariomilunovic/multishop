@@ -1,7 +1,7 @@
 #1
 composer create-project laravel/laravel multi-shop
 
-#2
+#2 Git
 git init
 
 git commit -m "first commit"
@@ -9,11 +9,11 @@ git branch -M main
 git remote add origin https://github.com/mariomilunovic/multishop.git
 git push -u origin main
 
-#3
+#3 Tailwind CSS
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
-tailwind.config.js:
+add to tailwind.config.js:
  content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
@@ -21,12 +21,12 @@ tailwind.config.js:
   ],
 
 
-#9
+#4 Alpine.js
 npm install alpinejs
 npm install @alpinejs/persist
 npm install @alpinejs/collapse
 
-app.js:
+add to app.js:
 import Alpine from 'alpinejs'
 import persist from '@alpinejs/persist'
 Alpine.plugin(persist)
@@ -34,3 +34,24 @@ import collapse from '@alpinejs/collapse'
 Alpine.plugin(collapse)
 window.Alpine = Alpine
 Alpine.start()
+
+#5 Livewire
+composer require livewire/livewire
+php artisan livewire:publish --config
+
+6# Tall toasts
+composer require usernotnull/tall-toasts
+php artisan vendor:publish --provider="Usernotnull\Toast\ToastServiceProvider" --tag="tall-toasts-config"
+
+add to app.js:
+import ToastComponent from '../../vendor/usernotnull/tall-toasts/resources/js/tall-toasts'
+Alpine.data('ToastComponent', ToastComponent)
+
+add to tailwind.config.js:
+ content: [
+   './vendor/usernotnull/tall-toasts/config/**/*.php',
+    './vendor/usernotnull/tall-toasts/resources/views/**/*.blade.php',
+  ],
+
+7#
+

@@ -2,9 +2,9 @@ import './bootstrap';
 
 import Alpine from 'alpinejs'
 
-// import ToastComponent from '../../vendor/usernotnull/tall-toasts/resources/js/tall-toasts'
+import ToastComponent from '../../vendor/usernotnull/tall-toasts/resources/js/tall-toasts'
 
-// Alpine.data('ToastComponent', ToastComponent)
+Alpine.data('ToastComponent', ToastComponent)
 
 import persist from '@alpinejs/persist'
 Alpine.plugin(persist)
