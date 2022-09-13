@@ -53,5 +53,14 @@ add to tailwind.config.js:
     './vendor/usernotnull/tall-toasts/resources/views/**/*.blade.php',
   ],
 
-7#
+#7 Helpers
+composer require barryvdh/laravel-debugbar --dev
 
+composer require spatie/laravel-web-tinker --dev
+php artisan web-tinker:install
+
+composer require --dev barryvdh/laravel-ide-helper
+add to config/app/php:
+Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class
+php artisan ide-helper:generate
+sail artisan ide-helper:model (run after sail is installed)
