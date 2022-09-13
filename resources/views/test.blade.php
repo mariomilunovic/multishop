@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    @toastScripts
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+
+    <!-- Scripts -->
+    @toastScripts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <title>Test</title>
-
+    <!-- Styles -->
     @livewireStyles
 </head>
-<body>
+<body class="font-bold">
     <div><livewire:toasts/></div>
 
-    <div class="bg-blue-700 text-white"> Tailwind test OK</div>
+    <div class="bg-green-700 text-white my-2"> Tailwind test OK</div>
 
-    <h1 x-data="{ message: 'Alpine test OK' }" x-text="message"></h1>
+    <h1 class="bg-green-700 text-white my-2" x-data="{ message: 'Alpine test OK' }" x-text="message"></h1>
 
     <livewire:livewire-test />
     @livewireScripts

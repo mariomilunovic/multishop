@@ -9,7 +9,7 @@ git branch -M main
 git remote add origin https://github.com/mariomilunovic/multishop.git
 git push -u origin main
 
-#3 Tailwind CSS
+#3 Tailwind CSS https://tailwindcss.com/docs/guides/laravel
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
@@ -21,7 +21,7 @@ add to tailwind.config.js:
   ],
 
 
-#4 Alpine.js
+#4 Alpine.js https://alpinejs.dev/essentials/installation
 npm install alpinejs
 npm install @alpinejs/persist
 npm install @alpinejs/collapse
@@ -35,11 +35,11 @@ Alpine.plugin(collapse)
 window.Alpine = Alpine
 Alpine.start()
 
-#5 Livewire
+#5 Livewire https://laravel-livewire.com/docs/2.x/installation
 composer require livewire/livewire
 php artisan livewire:publish --config
 
-6# Tall toasts
+6# Tall toasts https://github.com/usernotnull/tall-toasts?ref=madewithlaravel.com
 composer require usernotnull/tall-toasts
 php artisan vendor:publish --provider="Usernotnull\Toast\ToastServiceProvider" --tag="tall-toasts-config"
 
@@ -60,7 +60,13 @@ composer require spatie/laravel-web-tinker --dev
 php artisan web-tinker:install
 
 composer require --dev barryvdh/laravel-ide-helper
-add to config/app/php:
+
+add to config/app.php:
 Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class
+
 php artisan ide-helper:generate
 sail artisan ide-helper:model (run after sail is installed)
+
+# Laravel Sail
+php artisan sail:install
+0,3,5,7,8
