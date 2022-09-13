@@ -1,0 +1,5 @@
+#1
+composer create-project laravel/laravel multi-shop
+
+#2
+git init
