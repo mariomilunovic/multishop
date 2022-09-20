@@ -11,12 +11,16 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+
     <!-- Scripts -->
     @toastScripts
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/js/app.js'])
 
     <!-- Styles -->
+    @vite(['resources/css/app.css'])
     @livewireStyles
+
 </head>
 <body class="font-bold">
     <div><livewire:toasts/></div>

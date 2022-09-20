@@ -39,7 +39,7 @@ Alpine.start()
 composer require livewire/livewire
 php artisan livewire:publish --config
 
-6# Tall toasts https://github.com/usernotnull/tall-toasts?ref=madewithlaravel.com
+#6 Tall toasts https://github.com/usernotnull/tall-toasts?ref=madewithlaravel.com
 composer require usernotnull/tall-toasts
 php artisan vendor:publish --provider="Usernotnull\Toast\ToastServiceProvider" --tag="tall-toasts-config"
 
@@ -64,9 +64,20 @@ composer require --dev barryvdh/laravel-ide-helper
 add to config/app.php:
 Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class
 
+add to composer.json:
+{
+  "post-update-cmd": [
+    "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+    "@php artisan ide-helper:models -N",
+    "@php artisan ide-helper:generate",
+    "@php artisan ide-helper:eloquent",
+    "@php artisan ide-helper:meta"
+    ],
+}
+
 php artisan ide-helper:generate
 sail artisan ide-helper:model (run after sail is installed)
 
-# Laravel Sail
+#8 Laravel Sail
 php artisan sail:install
 0,3,5,7,8
